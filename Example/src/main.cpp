@@ -13,5 +13,5 @@
 
 int main()
 {
-    std::cout << "Hello World! [" << ARCH_TYPE << "]" << std::endl;
+    std::cout << "Hello World! [MSVC v" << _MSC_VER << "] [" << ARCH_TYPE << "]\n" << std::endl;
 }

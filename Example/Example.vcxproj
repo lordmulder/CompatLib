@@ -80,7 +80,7 @@
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <MinimumRequiredVersion>5.1</MinimumRequiredVersion>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
-      <AdditionalDependencies>libcompat-x86.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libcompat-$(PlatformToolset)-$(PlatformTarget).lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)\CompatLib\lib</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
@@ -104,7 +104,7 @@
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <MinimumRequiredVersion>5.2</MinimumRequiredVersion>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
-      <AdditionalDependencies>libcompat-x64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libcompat-$(PlatformToolset)-$(PlatformTarget).lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)\CompatLib\lib</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
