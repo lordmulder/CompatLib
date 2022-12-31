@@ -80,8 +80,8 @@
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <MinimumRequiredVersion>5.1</MinimumRequiredVersion>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
-      <AdditionalDependencies>libcompat-$(PlatformToolset)-$(PlatformTarget).lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(SolutionDir)\CompatLib\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>$(SolutionDir)CompatLib\lib\libcompat-$(PlatformToolset)-$(PlatformTarget).lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ShowProgress>LinkVerboseLib</ShowProgress>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -104,8 +104,7 @@
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <MinimumRequiredVersion>5.2</MinimumRequiredVersion>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
-      <AdditionalDependencies>libcompat-$(PlatformToolset)-$(PlatformTarget).lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(SolutionDir)\CompatLib\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>$(SolutionDir)CompatLib\lib\libcompat-$(PlatformToolset)-$(PlatformTarget).lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
