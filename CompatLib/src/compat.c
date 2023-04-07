@@ -15,3 +15,13 @@ int WINAPI XPCompatLib_LCMapStringEx(LPCWSTR lpLocaleName, DWORD dwMapFlags, LPC
 {
 	return LCMapStringW(LOCALE_SYSTEM_DEFAULT, dwMapFlags, lpSrcStr, cchSrc, lpDestStr, cchDest);
 }
+
+int WINAPI XPCompatLib_GetLocaleInfoEx(LPCWSTR lpLocaleName, LCTYPE LCType, LPWSTR  lpLCData, int cchData)
+{
+	return GetLocaleInfoW(LOCALE_SYSTEM_DEFAULT, LCType, lpLCData, cchData);
+}
+
+int WINAPI XPCompatLib_CompareStringEx(LPCWSTR lpLocaleName, DWORD dwCmpFlags, LPCWCH lpString1, int cchCount1, LPCWCH lpString2, int cchCount2, LPNLSVERSIONINFO lpVersionInformation, LPVOID lpReserved, LPARAM lParam)
+{
+	return CompareStringW(LOCALE_SYSTEM_DEFAULT, dwCmpFlags, lpString1, cchCount1, lpString2, cchCount2);
+}
